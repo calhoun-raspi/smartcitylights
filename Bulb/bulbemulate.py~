@@ -116,8 +116,8 @@ def checkCondition():
 		weatherPanel.configure(text = city + country + briefWeather + weatherDesc + currentTime, fg="red", bg="yellow", font="Verdana 10 bold", width=640, height=200)
 		connection = httplib.HTTPSConnection(baseUrl, 443)
 		connection.connect()
-		connection.request('PUT', '/1/classes/Bulb/muHzstKOYg', json.dumps({
-		# connection.request('PUT', '/muHzstKOYg', json.dumps({
+		# connection.request('PUT', '/1/classes/Bulb/muHzstKOYg', json.dumps({
+		connection.request('PUT', '/muHzstKOYg', json.dumps({
        "City": city,
        "Weather": briefWeather
      }), {

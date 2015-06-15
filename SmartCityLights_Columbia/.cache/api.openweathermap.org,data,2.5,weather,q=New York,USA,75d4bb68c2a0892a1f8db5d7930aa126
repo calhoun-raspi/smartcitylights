@@ -1,0 +1,13 @@
+status: 200
+content-location: http://api.openweathermap.org/data/2.5/weather?q=New York,
+ USA
+x-source: redis
+server: nginx
+connection: keep-alive
+access-control-allow-credentials: true
+date: Mon, 15 Jun 2015 18:37:58 GMT
+access-control-allow-origin: *
+access-control-allow-methods: GET, POST
+content-type: application/json; charset=utf-8
+
+{"coord":{"lon":-74.01,"lat":40.71},"sys":{"type":1,"id":1980,"message":0.0233,"country":"United States of America","sunrise":1434360251,"sunset":1434414541},"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"},{"id":721,"main":"Haze","description":"haze","icon":"50d"},{"id":741,"main":"Fog","description":"fog","icon":"50d"},{"id":701,"main":"Mist","description":"mist","icon":"50d"}],"base":"stations","main":{"temp":298.71,"pressure":1013,"humidity":69,"temp_min":294.15,"temp_max":302.15},"visibility":9656,"wind":{"speed":1.67,"deg":239.506},"rain":{"1h":2.41},"clouds":{"all":90},"dt":1434392587,"id":5128581,"name":"New York","cod":200}

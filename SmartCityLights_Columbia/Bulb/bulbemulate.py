@@ -113,19 +113,15 @@ def checkCondition():
 		panel.image = newImg
 	
 	if city != None and country != None and briefWeather != None and weatherDesc != None:
-		#weatherPanel.configure(text = city + country + briefWeather + weatherDesc + currentTime, fg="red", bg="yellow", font="Verdana 10 bold", width=640, height=200)
 		weatherPanel.configure(text = city + country + briefWeather + weatherDesc + str(currentTime), fg="red", bg="yellow", font="Verdana 10 bold", width=640, height=200)
 		connection = httplib.HTTPSConnection(baseUrl, 443)
 		connection.connect()
-		#aaV8sledY0
-		connection.request('PUT', '/1/classes/Bulb/', json.dumps({
+		connection.request('PUT', '/1/classes/Bulb/nyM8svpOEW', json.dumps({
        "City": city,
        "Weather": briefWeather
      }), {
-       "X-Parse-Application-Id": #"kayWALfBm6h1SQdANXoZtTZqA0N9sZsB7cwUUVod",
-"TSexah1prtbhpF6w4dellQ2XYWyk2bqcljOiElrN",
-       "X-Parse-REST-API-Key": #"pCtDSSXbhSuufcTpLz4a9Xfr2C5ImRfSyWQESBYH",
-"uTIdDnVpXjHTKmAd1gqLaZE4yZGIFWdhEB6ThlDb",
+       "X-Parse-Application-Id": "TSexah1prtbhpF6w4dellQ2XYWyk2bqcljOiElrN",
+       "X-Parse-REST-API-Key": "uTIdDnVpXjHTKmAd1gqLaZE4yZGIFWdhEB6ThlDb",
        "Content-Type": "application/json"
      })
 	bulbRoot.after(5000, checkCondition)

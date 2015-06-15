@@ -118,7 +118,13 @@ def checkCondition():
 		connection = httplib.HTTPSConnection(baseUrl, 443)
 		connection.connect()
 		#aaV8sledY0
-		connection.request('PUT', '/1/classes/Bulb/', json.dumps({
+		#connection.request('GET', '/1/classes/GameScore', '', {
+		#	"X-Parse-Application-Id": "TSexah1prtbhpF6w4dellQ2XYWyk2bqcljOiElrN",
+		#	"X-Parse-REST-API-Key": "uTIdDnVpXjHTKmAd1gqLaZE4yZGIFWdhEB6ThlDb"
+		#})
+		#result = json.loads(connection.getresponse().read())
+		#print result
+		connection.request('PUT', '/1/classes/Bulb/nyM8svpOEW', json.dumps({
        "City": city,
        "Weather": briefWeather
      }), {

@@ -48,7 +48,7 @@ if __name__=="__main__":
 		resp, content = h.request(baseUrl  + city + "," + country, "GET")
 		try:
 			contentJson = json.loads(content)
-			#print contentJson;
+			print contentJson;
 		except ValueError:
 			print "weather::main(): JSON Exception"
 			continue
